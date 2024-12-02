@@ -9,11 +9,11 @@
                                (and (1 . <= . diff)
                                     (diff . <= . 3))))])
     (for*/or ([comb (in-combinations report (sub1 (length report)))]
-              [lt (list <= >=)])
+              [comp (list <= >=)])
       (for/and ([x comb]
                 [y (rest comb)])
         (and (diff-safe? x y)
-             (lt x y))))))
+             (comp x y))))))
 
 (define (solve path)
   (let*-values ([(reports) (read-words-and-numbers/line path)])
