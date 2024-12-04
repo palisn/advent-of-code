@@ -8,7 +8,6 @@
 
 (define (rotate-c xss)
   (let loop ([xss xss] [n 1])
-    
     (cond
       [(empty? xss) '()]
       [(empty? (first xss))
