@@ -1,8 +1,8 @@
 #lang racket
 
 (define (patrol-path lab)
-  (define-values (w h) (values (length lab)
-                               (length (list-ref lab 0))))
+  (define-values (w h) (values (length (list-ref lab 0))
+                               (length lab)))
   (define pos
     (let* ([chars '(#\<   #\^ #\>    #\v)]
            [dirs  '(left up right down)]
